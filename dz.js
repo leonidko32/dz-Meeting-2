@@ -5,48 +5,51 @@
 // 5. Выводить в консоль простые числа от 1 до n до тех пор, пока пользователь не скажет хватить.
 
 function punkt1(n) {
-    let i=1;
     n = prompt('Введите значение n');
-    while(i<=n){
+    for(let i = 1;i<=n;){
         console.log(i);
-        i++;
+         i++;
     }
 }
+
+    
 
 
 function isSimple( n ) {
-    for (let k = 2; k < n ; k++) {
+    let k = 2;
+    while( k < n ){
+             
         if (n % k === 0) {
             return false;
         }
+        k++;
     }
 
     return true;
+    
+
 }
+
 function getSimple(n) {
-    let m = 1;
     n = prompt('Введите значение n');
-    do {
+    for(let m = 1;m<=n;m++){
         if (isSimple(m)) {
             console.log(m);
         }
-
-        m++;
-    } while (m <= n);
+    }
 }
 
 
 
 function punkt3(n, k){
-    let m = 1;
+    
     n = prompt('Введите значение n');
     k = prompt('Введите значение k');
-    while(m<=n){
+    for(let m = 1;m<=n;m++){
         if(m%k===0){
-        console.log(m);  
-        }
-        m++;
-    }    
+            console.log(m);  
+            }
+    }
 }
     
 function povtor (message) {
